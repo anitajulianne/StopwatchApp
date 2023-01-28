@@ -23,7 +23,9 @@ const App = () => {
   return (
       <Container>
         <Timer time={time} />
-        <Button setTime={setTime} setRunning={setRunning} />
+        <Button action={() => setRunning(true)} text={"Start"} />
+        <Button action={() => setRunning(false)} text={"Stop"} />
+        <Button action={() => setTime(0)} text={"Reset"} />
       </Container>
   );
 };
